@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b49">
+  <meta name="description" content="PATOTÓN 2026: una misión, dos fechas y muchas razones para compartir. De corazón patuno para todos.">
+  <title>PATOTÓN 2026 · De corazón patuno para todos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#inicio"><span class="brand-duck">🦆</span><span>PATOTÓN <b>2026</b></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  <nav id="mainNav">
+    <a href="#mision">LA MISIÓN</a><a href="#fechas">LAS DOS FECHAS</a><a href="#ayudar">CÓMO AYUDAR</a>
+    <a href="#fechas">CUENTA REGRESIVA</a><a href="#donaciones-recaudadas">DONACIONES</a><a href="#patoton-tv">PATOTÓN TV</a><a href="#colaborar">COLABORADORES</a>
+    <button class="nav-admin" id="adminLoginOpen">ACCESO ADMIN</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-art"><img src="https://i.imgur.com/FN0TCXY.png" alt="Identidad navideña oficial de PATOTÓN 2026"></div>
+    <div class="hero-copy">
+      <span class="eyebrow">UNA CAMPAÑA SOLIDARIA DE PATUNIOG</span>
+      <h1>Una misión.<br><em>Dos fechas.</em><br>Un montón de sonrisas.</h1>
+      <p>Queremos hacer una Navidad inolvidable y llevar un poquito de alegría a quienes más lo necesitan. ¡Pero no podemos hacerlo solos!</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#ayudar">QUIERO AYUDAR <span>♥</span></a><a class="btn btn-ghost" href="#mision">CONOCE LA MISIÓN</a></div>
+      <p class="slogan">DE CORAZÓN PATUNO PARA TODOS 🦆</p>
+    </div>
+    <div class="snow snow-one">✦</div><div class="snow snow-two">✧</div>
+  </section>
+
+  <section class="section intro" id="mision">
+    <div class="section-tag">01 · NUESTRA MISIÓN</div>
+    <h2>La magia de la Navidad<br><em>se comparte.</em></h2>
+    <p class="section-lead">PATOTÓN 2026 es una campaña solidaria impulsada por PatunioG para reunir donaciones y organizar jornadas de apoyo durante Navidad y Día de Reyes.</p>
+    <div class="mission-grid">
+      <article class="mission-card"><span>🎁</span><h3>REGALAR ILUSIÓN</h3><p>Reunir juguetes y regalos para compartir momentos felices.</p></article>
+      <article class="mission-card"><span>🧥</span><h3>COMPARTIR ABRIGO</h3><p>Recibir ropa en buen estado para quienes puedan necesitarla.</p></article>
+      <article class="mission-card"><span>🍽️</span><h3>COMPARTIR ALIMENTOS</h3><p>Sumar alimentos y apoyos para las jornadas de convivencia.</p></article>
+    </div>
+  </section>
+
+  <section class="dates-section" id="fechas">
+    <div class="section section-inner">
+      <div class="section-tag">02 · DOS JORNADAS, UNA MISIÓN</div>
+      <h2>La alegría tiene<br><em>dos encuentros.</em></h2>
+      <div class="date-grid">
+        <article class="date-card christmas"><div class="date-icon">🎄</div><span>PRIMERA JORNADA</span><h3>25 DICIEMBRE</h3><h4>NAVIDAD PATUNA</h4><p>Una jornada para compartir regalos, ropa, alimentos y momentos especiales.</p></article>
+        <article class="date-card kings"><div class="date-icon">👑</div><span>SEGUNDA JORNADA</span><h3>6 ENERO</h3><h4>DÍA DE REYES PATUNO</h4><p>Seguimos compartiendo ilusión con regalos y apoyos para comenzar el año con alegría.</p></article>
+      </div>
+
+      <div class="countdown-heading"><span>⏳</span><div><b>¡LA CUENTA REGRESIVA YA COMENZÓ!</b><small>Dos fechas para compartir alegría.</small></div></div>
+      <div class="countdown-grid">
+        <article class="countdown-card"><div class="countdown-label">🎄 NAVIDAD PATUNA · 25 DICIEMBRE 2026</div><div class="countdown-values" id="countdownChristmas"><div><b>--</b><small>DÍAS</small></div><div><b>--</b><small>HORAS</small></div><div><b>--</b><small>MIN</small></div><div><b>--</b><small>SEG</small></div></div><p id="countdownChristmasStatus">Preparando la magia navideña…</p></article>
+        <article class="countdown-card"><div class="countdown-label">👑 DÍA DE REYES PATUNO · 6 ENERO 2027</div><div class="countdown-values" id="countdownKings"><div><b>--</b><small>DÍAS</small></div><div><b>--</b><small>HORAS</small></div><div><b>--</b><small>MIN</small></div><div><b>--</b><small>SEG</small></div></div><p id="countdownKingsStatus">La ilusión continúa…</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="raised-section" id="donaciones-recaudadas">
+    <div class="raised-wrap">
+      <div class="section-tag">03 · CADA APORTACIÓN CUENTA</div>
+      <h2>Lo que logramos <em>juntos.</em></h2>
+      <p>Este es el avance de las donaciones recaudadas para PATOTÓN 2026.</p>
+      <div class="raised-total-card">
+        <span>DONACIONES RECAUDADAS</span>
+        <strong id="raisedMoney">$0</strong>
+        <small id="raisedUpdated">Actualizado por el equipo PATOTÓN</small>
+      </div>
+      <div class="raised-stats">
+        <article><span>🎁 JUGUETES</span><b id="raisedToys">0</b><small>piezas reunidas</small></article>
+        <article><span>🧥 PRENDAS</span><b id="raisedClothes">0</b><small>prendas reunidas</small></article>
+        <article><span>🥫 ALIMENTOS</span><b id="raisedFood">0</b><small>apoyos reunidos</small></article>
+      </div>
+      <p class="raised-note">Cifras publicadas por el equipo organizador. Los datos se actualizan cuando el administrador guarda los nuevos totales.</p>
+    </div>
+  </section>
+
+  <section class="section help-section" id="ayudar">
+    <div class="section-tag">03 · TÚ TAMBIÉN PUEDES SER PARTE</div>
+    <h2>¿Cómo puedes<br><em>ayudar?</em></h2>
+    <p class="section-lead">Cada aportación cuenta. Elige cómo te gustaría sumarte y nuestro equipo se pondrá en contacto contigo.</p>
+    <div class="help-grid">
+      <div class="help-options">
+        <div class="help-option"><b>🎁 JUGUETES</b><span>Nuevos o en excelente estado.</span></div>
+        <div class="help-option"><b>🧥 ROPA</b><span>Prendas limpias y en buen estado.</span></div>
+        <div class="help-option"><b>🥫 ALIMENTOS</b><span>Alimentos no perecederos y apoyos para las jornadas.</span></div>
+        <div class="help-option"><b>🤝 VOLUNTARIADO</b><span>Tiempo y ayuda para organizar la campaña.</span></div>
+      </div>
+      <form class="form-card" id="donationForm">
+        <h3>QUIERO SUMARME</h3>
+        <label>¿Cómo quieres ayudar?
+          <select id="donationType" required><option value="">Selecciona una opción</option><option>Juguetes</option><option>Ropa</option><option>Alimentos</option><option>Apoyo para la jornada</option><option>Voluntariado</option><option>Otro</option></select>
+        </label>
+        <label>Tu nombre o el de tu organización<input id="donorName" maxlength="90" required placeholder="Nombre"></label>
+        <label>Correo o teléfono de contacto (opcional)<input id="donorContact" maxlength="120" placeholder="Dato de contacto"></label>
+        <label>Cuéntanos un poquito más<textarea id="donorMessage" rows="3" maxlength="500" placeholder="¿Qué te gustaría aportar?"></textarea></label>
+        <button class="btn btn-primary full" type="submit">ENVIAR MI PROPUESTA ♥</button>
+        <p class="form-note">No publiques datos personales aquí. Si eres menor de edad, pide a un adulto de confianza que te ayude con la coordinación.</p>
+        <p class="form-status" id="donationStatus" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="collab-section" id="colaborar">
+    <div class="section section-inner collab-inner">
+      <div><div class="section-tag">04 · JUNTOS LLEGAMOS MÁS LEJOS</div><h2>Marcas, creadores<br>y comunidad: <em>¡los necesitamos!</em></h2><p>Invitamos a influencers, empresas, marcas y personas solidarias a colaborar con PATOTÓN 2026.</p><a class="btn btn-primary" href="#ayudar">QUIERO COLABORAR</a></div>
+      <div class="collab-art">🦆<span>+</span>❤️</div>
+    </div>
+  </section>
+
+
+  <section class="tv-section" id="patoton-tv">
+    <div class="tv-wrap">
+      <div class="tv-heading"><div><div class="section-tag">05 · PRENDE LA MAGIA</div><h2>PATOTÓN <em>TV</em></h2><p>Videos, recuerdos y momentos especiales de nuestra campaña. ¡Mira cómo construimos esta misión!</p></div><div class="tv-stamp">📺<b>CANAL PATUNO</b><small>ESPECIAL NAVIDEÑO 2026</small></div></div>
+      <div class="tv-feature" id="tvFeatured"><div class="tv-feature-placeholder"><span>🦆</span><b>BIENVENIDOS A PATOTÓN TV</b><small>Muy pronto compartiremos videos de la campaña.</small></div></div>
+      <div class="tv-video-grid" id="publicVideos"><article class="tv-empty"><span>🎬</span><b>PREPARATIVOS</b><small>Videos de los preparativos aparecerán aquí.</small></article><article class="tv-empty"><span>🎁</span><b>JORNADAS PATUNAS</b><small>Momentos de Navidad y Día de Reyes.</small></article><article class="tv-empty"><span>❤️</span><b>AGRADECIMIENTOS</b><small>Un espacio para nuestros colaboradores.</small></article></div>
+    </div>
+  </section>
+  <section class="section updates-section" id="actualizaciones">
+    <div class="section-tag">05 · EL CAMINO DE PATOTÓN</div><h2>Pequeñas acciones,<br><em>grandes sonrisas.</em></h2>
+    <p class="section-lead">Aquí compartiremos noticias, avances y agradecimientos de la campaña.</p>
+    <div class="updates-list" id="publicUpdates"><article class="update-card"><span>📣</span><div><b>¡PATOTÓN 2026 está en marcha!</b><p>Estamos preparando dos jornadas solidarias: 25 de diciembre y 6 de enero.</p></div></article></div>
+  </section>
+</main>
+
+<footer><a class="brand" href="#inicio"><span class="brand-duck">🦆</span><span>PATOTÓN <b>2026</b></span></a><p>DE CORAZÓN PATUNO PARA TODOS</p><small>Una campaña solidaria de PatunioG · 2026</small></footer>
+
+<div class="modal-backdrop" id="adminModal" hidden>
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="adminModalTitle">
+    <button class="modal-close" id="adminModalClose" aria-label="Cerrar">×</button>
+    <div class="section-tag">ÁREA PRIVADA</div><h2 id="adminModalTitle">ACCESO <em>ADMIN</em></h2>
+    <p>Solo para cuentas autorizadas de PATOTÓN 2026.</p>
+    <form id="adminLoginForm"><label>Correo<input id="adminEmail" type="email" required autocomplete="username"></label><label>Contraseña<input id="adminPassword" type="password" required autocomplete="current-password"></label><button class="btn btn-primary full">INICIAR SESIÓN</button></form>
+    <p class="form-status" id="adminLoginStatus"></p>
+  </section>
+</div>
+
+<section class="admin-shell" id="adminShell" hidden>
+  <div class="admin-top"><div><span class="section-tag">PATOTÓN 2026 · CONTROL CENTRAL</span><h2>PANEL <em>ADMIN</em></h2></div><div class="admin-top-actions"><span id="adminIdentity">Administrador</span><button class="btn btn-ghost" id="adminLogout">CERRAR SESIÓN</button></div></div>
+  <nav class="admin-tabs" id="adminTabs">
+    <button class="active" data-tab="overview">RESUMEN</button><button data-tab="donations">DONACIONES</button><button data-tab="volunteers">VOLUNTARIOS</button><button data-tab="updates">ACTUALIZACIONES</button><button data-tab="videos">PATOTÓN TV</button><button data-tab="raised">DONACIONES RECAUDADAS</button><button data-tab="settings">CAMPAÑA</button>
+  </nav>
+  <div class="admin-content">
+    <div class="admin-view active" id="tab-overview"><div class="stat-grid"><article><span>PROPUESTAS RECIBIDAS</span><b id="statDonations">—</b></article><article><span>VOLUNTARIOS</span><b id="statVolunteers">—</b></article><article><span>ACTUALIZACIONES</span><b id="statUpdates">—</b></article></div><p class="admin-hint">Este panel es privado. Revisa las propuestas y actualiza la información pública de la campaña.</p></div>
+    <div class="admin-view" id="tab-donations"><div class="admin-view-head"><h3>PROPUESTAS DE DONACIÓN</h3><button class="btn btn-ghost" id="refreshDonations">ACTUALIZAR</button></div><div class="table-wrap"><table><thead><tr><th>TIPO</th><th>NOMBRE</th><th>CONTACTO</th><th>MENSAJE</th><th>ESTADO</th><th>ACCIÓN</th></tr></thead><tbody id="donationsRows"></tbody></table></div></div>
+    <div class="admin-view" id="tab-volunteers"><div class="admin-view-head"><h3>VOLUNTARIOS</h3><button class="btn btn-ghost" id="refreshVolunteers">ACTUALIZAR</button></div><div class="table-wrap"><table><thead><tr><th>NOMBRE</th><th>CONTACTO</th><th>DISPONIBILIDAD</th><th>ESTADO</th></tr></thead><tbody id="volunteersRows"></tbody></table></div><p class="admin-hint">El formulario público de voluntariado se puede activar en una siguiente iteración.</p></div>
+    <div class="admin-view" id="tab-updates"><div class="admin-view-head"><h3>ACTUALIZACIONES PÚBLICAS</h3></div><form id="updateForm" class="admin-form"><label>TÍTULO<input id="updateTitle" maxlength="120" required></label><label>MENSAJE<textarea id="updateBody" maxlength="700" rows="3" required></textarea></label><button class="btn btn-primary">PUBLICAR ACTUALIZACIÓN</button><p class="form-status" id="updateStatus"></p></form><div id="adminUpdatesRows"></div></div>
+    <div class="admin-view" id="tab-videos">
+      <div class="admin-view-head"><h3>GESTIÓN DE PATOTÓN TV</h3><button class="btn btn-ghost" id="refreshVideos">ACTUALIZAR</button></div>
+      <form id="videoForm" class="admin-form">
+        <label>TÍTULO DEL VIDEO<input id="videoTitle" maxlength="120" required placeholder="Ej. Así comienza PATOTÓN 2026"></label>
+        <label>DESCRIPCIÓN<textarea id="videoDescription" maxlength="500" rows="2" placeholder="Describe este video"></textarea></label>
+        <label>TIPO DE CONTENIDO<select id="videoType"><option value="youtube">Enlace de YouTube</option><option value="upload">Subir video desde mi dispositivo</option></select></label>
+        <label id="youtubeField">ENLACE DE YOUTUBE<input id="videoYoutube" type="url" placeholder="https://www.youtube.com/watch?v=..."></label>
+        <label id="uploadField" hidden>ARCHIVO DE VIDEO<input id="videoFile" type="file" accept="video/mp4,video/webm,video/quicktime"></label>
+        <label class="admin-check"><input id="videoFeatured" type="checkbox"> Destacar como video principal</label>
+        <button class="btn btn-primary" type="submit">PUBLICAR EN PATOTÓN TV</button><p class="form-status" id="videoStatus"></p>
+      </form>
+      <div id="adminVideosRows"></div>
+      <p class="admin-hint">Para subir archivos, el SQL crea un espacio de almacenamiento privado para administradores y lectura pública de videos publicados. Recomendado: MP4 o WebM, máximo 50 MB por archivo en esta primera versión.</p>
+    </div>
+    <div class="admin-view" id="tab-raised">
+      <h3>ACTUALIZAR DONACIONES RECAUDADAS</h3>
+      <p class="admin-hint">Edita los totales oficiales. Al guardar, la sección pública se actualiza automáticamente para todas las personas que visiten la página.</p>
+      <form id="raisedForm" class="admin-form">
+        <label>DONACIONES ECONÓMICAS RECAUDADAS (MXN)<input id="raisedAmount" type="number" min="0" step="0.01" required></label>
+        <label>JUGUETES REUNIDOS (PIEZAS)<input id="raisedToyCount" type="number" min="0" step="1" required></label>
+        <label>PRENDAS REUNIDAS<input id="raisedClothesCount" type="number" min="0" step="1" required></label>
+        <label>APOYOS DE ALIMENTOS<input id="raisedFoodCount" type="number" min="0" step="1" required></label>
+        <button class="btn btn-primary" type="submit">GUARDAR Y ACTUALIZAR WEB</button><p class="form-status" id="raisedStatus"></p>
+      </form>
+    </div>
+    <div class="admin-view" id="tab-settings"><h3>INFORMACIÓN DE LA CAMPAÑA</h3><form id="campaignForm" class="admin-form"><label>Nombre<input id="campaignName" value="PATOTÓN 2026" required></label><label>Lema<input id="campaignSlogan" value="De corazón patuno para todos" required></label><label>Fecha 1<input value="25 de diciembre de 2026" disabled></label><label>Fecha 2<input value="6 de enero de 2027" disabled></label><button class="btn btn-primary" type="button" id="saveCampaignLocal">GUARDAR EN ESTA SESIÓN</button><p class="form-status" id="campaignStatus">Las fechas oficiales se muestran en la web.</p></form></div>
+  </div>
+</section>
+</body>
+</html>
